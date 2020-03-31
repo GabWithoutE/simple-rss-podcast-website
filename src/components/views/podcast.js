@@ -7,10 +7,11 @@ export default function Podcast() {
 
   // Initialize Podcast Episode List
   useEffect(() => {
-    fetchRss().then( data => {
+    fetchRss()
+      .then((data) => {
         setRss(data);
       })
-      .catch(err => {
+      .catch((err) => {
         setError(err);
       });
   }, [setRss, setError]);
@@ -19,16 +20,12 @@ export default function Podcast() {
     <>
       <header>{ rss && rss.title }</header>
       <ul>
-        { rss &&
-          rss.items.map((episode) => (
-            <li key={episode.guid}>{episode.title}</li>
-          ))
-        }
+        { rss && rss.items.map((episode) => (
+          <li key={episode.guid}>{episode.title}</li>
+        ))}
       </ul>
 
-      { error &&
-        <p>RSS Feed Unavailable</p>
-      }
+      { error && <p>RSS Feed Unavailable</p> }
     </>
   );
 }

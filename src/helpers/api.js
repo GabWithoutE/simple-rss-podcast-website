@@ -4,5 +4,5 @@ import { RSS_URL } from 'helpers/config';
 const PARSER = new Parser();
 
 export function fetchRss() {
-  return PARSER.parseURL(RSS_URL).then((response) => response);
+  return PARSER.parseURL(RSS_URL);
 }
