@@ -1,5 +1,5 @@
 import React from 'react';
-import 'styles/App.css';
+import 'styles/App.scss';
 import Podcast from 'components/views/podcast';
 
 function App() {
