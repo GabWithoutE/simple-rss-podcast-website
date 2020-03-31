@@ -1,8 +1,9 @@
 import axios from 'axios';
+import { RSS_URL } from "helpers/config";
 
-export default function fetchRss(url) {
+export default function fetchRss() {
   return axios.get(
-    url,
+    RSS_URL,
   ).then( response => {
     const rssString = response.data;
     if (!rssString) {
