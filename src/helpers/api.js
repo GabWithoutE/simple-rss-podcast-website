@@ -1,14 +1,8 @@
-import axios from 'axios';
-import { RSS_URL } from "helpers/config";
+import Parser from 'rss-parser';
+import { RSS_URL } from 'helpers/config';
 
-export default function fetchRss() {
-  return axios.get(
-    RSS_URL,
-  ).then( response => {
-    const rssString = response.data;
-    if (!rssString) {
-      throw Error('RSS feed has no data');
-    }
-    return rssString;
-  });
+const PARSER = new Parser();
+
+export function fetchRss() {
+  return PARSER.parseURL(RSS_URL).then((response) => response);
 }

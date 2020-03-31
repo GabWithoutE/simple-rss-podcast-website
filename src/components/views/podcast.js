@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import fetchRss from 'helpers/api';
+import { fetchRss } from 'helpers/api';
 
 export default function Podcast() {
   const [rss, setRss] = useState(null);
@@ -7,8 +7,7 @@ export default function Podcast() {
 
   // Initialize Podcast Episode List
   useEffect(() => {
-    fetchRss()
-      .then(data => {
+    fetchRss().then( data => {
         setRss(data);
       })
       .catch(err => {
@@ -18,10 +17,15 @@ export default function Podcast() {
 
   return (
     <>
-      <header>Podcast Name Here</header>
-      { rss &&
-        <p>{ rss }</p>
-      }
+      <header>{ rss && rss.title }</header>
+      <ul>
+        { rss &&
+          rss.items.map((episode) => (
+            <li key={episode.guid}>{episode.title}</li>
+          ))
+        }
+      </ul>
+
       { error &&
         <p>RSS Feed Unavailable</p>
       }
