@@ -16,9 +16,8 @@ hr {
   border: none;
   color: #000;
   background-color: #000;
-  width: 80vw;
+  width: 100%;
   text-align: center;
-  margin: 0 auto;
 }
 
 h3 {
@@ -44,9 +43,7 @@ h3 {
     padding-right: 15px;
     padding-left: 15px;
     padding-top: $browser-top-padding;
-
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 
     width: 80vw;
 

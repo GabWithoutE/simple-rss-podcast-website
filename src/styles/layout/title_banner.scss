@@ -21,7 +21,6 @@ header#title_banner {
 @media only screen and (max-width: 796px) {
   header#title_banner {
     display: block;
-    flex-direction: row;
 
     img {
       display: block;
@@ -33,12 +32,12 @@ header#title_banner {
     }
 
     h1.title {
-      margin-top: 15px;
+      margin: 15px 0 0 0;
       font-size: 30px;
     }
 
     h2.creator {
-      margin-top: 15px;
+      margin: 15px 0 0 0;
       font-size: 15px;
     }
   }
