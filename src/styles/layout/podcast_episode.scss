@@ -1,0 +1,22 @@
+ul.podcast-episode-list {
+  margin-top: 0px;
+  padding-inline-start: 0px;
+
+  li.podcast-episode {
+    display: block;
+    list-style-type: none;
+    padding: 10px 0;
+    border-bottom: 2px solid #bbbdbf;
+
+    a {
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    p {
+      color: $subtitle-color;
+      font-size: 12px;
+      margin: 0;
+    }
+  }
+}

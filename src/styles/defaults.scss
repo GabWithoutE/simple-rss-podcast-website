@@ -1,0 +1,15 @@
+$application-font-family: Lato, sans-serif;
+$application-font-weight: 400;
+
+// Browser Defaults
+$browser-top-padding: 32px;
+$browser-width: 960px;
+
+$subtitle-color: #7f8287;
+
+@mixin visually-hidden {
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 0px; width: 0px;
+  margin: 0px; padding: 0; border: 0;
+}

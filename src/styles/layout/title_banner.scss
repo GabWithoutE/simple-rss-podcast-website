@@ -1,0 +1,46 @@
+header#title_banner {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 20px;
+
+  img {
+    width: 200px;
+    height: 200px;
+  }
+
+  h1.title {
+    font-size: 80px;
+    margin: 15px 0 0 15px;
+  }
+
+  h2.creator {
+    margin: 30px 0 0 15px;
+  }
+}
+
+@media only screen and (max-width: 796px) {
+  header#title_banner {
+    display: block;
+    flex-direction: row;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    div.title-info {
+      text-align: center;
+    }
+
+    h1.title {
+      margin-top: 15px;
+      font-size: 30px;
+    }
+
+    h2.creator {
+      margin-top: 15px;
+      font-size: 15px;
+    }
+  }
+
+}
