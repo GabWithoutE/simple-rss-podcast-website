@@ -2,6 +2,8 @@
 This is a simple website, built with React and Deployed in AWS, for a podcast just getting started. 
 This React Application makes a request to the specified podcast RSS URL, and displays the episodes of the podcast.
 
+[Example](shewmetheway.com)
+
 ## Local Workflow
 ### Setup
 ```npm run install```
@@ -11,32 +13,34 @@ This React Application makes a request to the specified podcast RSS URL, and dis
 
 ## Deployment
 ### Manual Deployment (by script)
+(In progress)
 
 ### Automated Deployment (by Github CI)
+(In progress)
 
 ## Project Notes
 ### Goal
 To deliver a simple, configurable, podcast website that can be used to display links to the episodes of a podcast
---specifically for me and my friend's podcast. Hack it together in a couple of days.
+--specifically for me and my friend's podcast. Hack it together in a couple of days time.
 
-### Scope
-1. React App 
-    - Parses RSS Feed
-    - Displays episodes in a list format
-    - Nice, clean style with a heading 
-    - Project configurable
-2. Deployment
-    - Manual deployment via local script
-    - Single deployment environment (publicly available)
-    - Automated deployment via Github CI
-3. Infrastructure
-    - Terraform infrastructure definition
-4. Assets
-    - favicon
-    - podcast art
+### Initial Scope
+- [x] React App
+    - [x] Parses RSS Feed
+    - [x] Displays episodes in a list format
+    - [x] OK, clean style with a heading 
+    - [x] Project configurable RSS feed
+- [ ] Deployment
+    - [x] Manual deployment via local script
+    - [x] Single deployment environment (publicly available)
+    - [ ] Automated deployment via Github CI
+- [ ] Infrastructure
+    - [ ] configurable Terraform infrastructure definition for easy reproducibility
+- [ ] Assets
+    - [ ] favicon
+    - [x] podcast art (Currently Commissioned)
 
 ### Architecture Design
-Diagram Here
+Diagram Here (In progress)
 
 ### Stretch Goals
 1. React App
