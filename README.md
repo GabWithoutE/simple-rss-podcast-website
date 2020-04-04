@@ -33,6 +33,7 @@ To deliver a simple, configurable, podcast website that can be used to display l
     - [x] Manual deployment via local script
     - [x] Single deployment environment (publicly available)
     - [ ] Automated deployment via Github CI
+    - [ ] Set Security headers
 - [ ] Infrastructure
     - [ ] configurable Terraform infrastructure definition for easy reproducibility
 - [ ] Assets
