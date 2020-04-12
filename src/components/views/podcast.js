@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { fetchRss } from 'helpers/api';
 import PodcastEpisode from 'components/layout/podcast_episode';
-import { INSTAGRAM_URL, GITHUB_URL } from 'helpers/config';
+import { INSTAGRAM_URL, GITHUB_URL, PODCAST_TITLE } from 'helpers/config';
 
 export default function Podcast() {
   const [rss, setRss] = useState(null);
@@ -21,10 +21,10 @@ export default function Podcast() {
   return (
     <main>
       <header id="title_banner">
-        { rss && <img src={rss.image.url} alt="podcast" /> }
+        <img src={rss && rss.image.url} alt="podcast" />
         <div className="title-info">
-          <h1 className="title">{rss && rss.title}</h1>
-          <h2 className="creator">{`By: ${rss && rss.creator}`}</h2>
+          <h1 className="title">{PODCAST_TITLE}</h1>
+          <h2 className="creator">{rss && `By: ${rss.creator}`}</h2>
           <nav className="external-links">
             <a className="simple-rss-website-icons" href={INSTAGRAM_URL}>instagram</a>
             <a className="simple-rss-website-icons" href={GITHUB_URL}>github</a>
@@ -36,7 +36,7 @@ export default function Podcast() {
 
       <h3>Episodes</h3>
       <ul className="podcast-episode-list">
-        { rss && rss.items.map((episode) => (
+        {rss && rss.items.map((episode) => (
           <PodcastEpisode
             key={episode.guid}
             title={episode.title}
