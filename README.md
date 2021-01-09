@@ -36,8 +36,8 @@ To deliver a simple, configurable, podcast website that can be used to display l
     - [ ] Set Security headers
 - [ ] Infrastructure
     - [ ] configurable Terraform infrastructure definition for easy reproducibility
-- [ ] Assets
-    - [ ] favicon
+- [x] Assets
+    - [x] favicon
     - [x] podcast art (Currently Commissioned)
 
 ### Architecture Design
